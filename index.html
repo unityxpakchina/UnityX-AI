@@ -3,51 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnityX AI | Pakistan-China AI Bridge</title>
+    <title>UnityX AI | Urdu-Chinese Translator</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>
-        <div class="logo-flags">
+        <div class="logo">
             <span class="logo-text">UNITYX AI</span>
             <div class="flags">🇵🇰❤️🇨🇳</div>
         </div>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Translator</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Open-Source AI for Urdu ↔ Chinese</h1>
-            <p>Bridging language barriers between Pakistan and China</p>
-            <a href="contact.html" class="cta-button">Join Our Project</a>
+        <section class="translator-container">
+            <div class="language-selector">
+                <select id="sourceLang">
+                    <option value="ur">Urdu</option>
+                    <option value="zh">Chinese</option>
+                    <option value="en">English</option>
+                </select>
+                <button id="swapLangs">⇄</button>
+                <select id="targetLang">
+                    <option value="zh">Chinese</option>
+                    <option value="ur">Urdu</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+
+            <div class="translation-box">
+                <textarea id="inputText" placeholder="Type text here..."></textarea>
+                <button id="translateBtn">Translate →</button>
+                <div id="outputText"></div>
+            </div>
         </section>
 
         <section class="features">
-            <div class="feature-card">
-                <h3>Translation</h3>
-                <p>Culturally-aware Urdu-Chinese AI translator</p>
-            </div>
-            <div class="feature-card">
-                <h3>Education</h3>
-                <p>Free language learning tools</p>
-            </div>
-            <div class="feature-card">
-                <h3>Open Source</h3>
-                <p>Community-driven development</p>
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Real-time Translation</h3>
+                    <p>Instant Urdu ↔ Chinese conversion</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Cultural Accuracy</h3>
+                    <p>Idioms and local phrases supported</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Follow us: 
-            <a href="https://x.com/UnityX_PakChina" target="_blank">Twitter</a> | 
-            <a href="https://github.com/unityxpakchina/UnityX-AI" target="_blank">GitHub</a>
-        </p>
-        <p>© 2023 UnityX AI</p>
+        <p>Email: <a href="mailto:UnityX.PakChina@gmail.com">UnityX.PakChina@gmail.com</a></p>
+        <p>Follow: <a href="https://x.com/UnityX_PakChina" target="_blank">@UnityX_PakChina</a></p>
     </footer>
+
+    <script src="scripts/translator.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
